@@ -1,0 +1,25 @@
+:root {
+    --dark-color: #232323;
+    --light-color: #F2F7FA;
+    --accent-color: #FF3E41;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', 'Roboto', sans-serif;   
+}
+
+body {
+    background-color: var(--dark-color);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    color: var(--light-color);
+    text-align: center;
+}
+
+hr {
+    color: var(--accent-color);
+    border-top: 5px solid;
+    width: 80vw;
+}
