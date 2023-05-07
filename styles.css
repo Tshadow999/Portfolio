@@ -1,11 +1,20 @@
 :root {
     --dark-color: #232323;
     --light-color: #F2F7FA;
-    --accent-color: #FF3E41;
+    --accent-color: #0072C6;
+}
+
+/* Default Styling */
+
+::selection {
+    color: var(--accent-color);
+    background: var(--light-color);
 }
 
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     font-family: 'Noto Sans JP', 'Roboto', sans-serif;   
 }
 
@@ -13,13 +22,81 @@ body {
     background-color: var(--dark-color);
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+li, p, h1, h2, h3, h4, h5, h6 {
     color: var(--light-color);
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.75rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+h3 {
+    font-size: 1.75rem;
+}
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-color);
+}
+
+
+/* Helper classes */
+
+.centered-text {
     text-align: center;
 }
 
-hr {
+
+.colored-text {
     color: var(--accent-color);
-    border-top: 5px solid;
-    width: 80vw;
+}
+
+/* Specific styling */
+
+.selected-nav {
+    color: var(--accent-color);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;   
+}
+
+nav h2 {
+    padding-left: 15rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    padding-right: 15em;
+}
+
+nav ul li {
+    padding: 1em 3em;
+    font-size: 1.2em;
+    list-style: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a {
+	transition: 0.25s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
 }
