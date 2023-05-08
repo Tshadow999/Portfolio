@@ -1,5 +1,6 @@
 :root {
     --dark-color: #232323;
+    --dark-color-transparent: #2323239f;
     --light-color: #F2F7FA;
     --accent-color: #0072C6;
 }
@@ -62,7 +63,7 @@ a {
     color: var(--accent-color);
 }
 
-/* Specific styling */
+/* Nav Styling */
 
 .selected-nav {
     color: var(--accent-color);
@@ -73,6 +74,8 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;   
+    height: 8vh;
+    background-color: var(--dark-color-transparent);
 }
 
 nav h2 {
@@ -99,4 +102,15 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--accent-color);
+}
+
+/* Main body Styling */
+#main-image {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+    z-index: -1;
 }
