@@ -1,6 +1,5 @@
 :root {
     --dark-color: #232323;
-    --dark-color-transparent: #2323239f;
     --light-color: #F2F7FA;
     --accent-color: #0072C6;
 }
@@ -75,17 +74,17 @@ nav {
     align-items: center;
     justify-content: space-between;   
     height: 8vh;
-    background-color: var(--dark-color-transparent);
+    background-color: var(--dark-color);
 }
 
 nav h2 {
-    padding-left: 15rem;
+    padding-left: 2em;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
-    padding-right: 15em;
+    padding-right: 10em;
 }
 
 nav ul li {
@@ -94,6 +93,7 @@ nav ul li {
     list-style: none;
     font-weight: bold;
     text-transform: uppercase;
+
 }
 
 nav ul li a {
@@ -113,4 +113,38 @@ nav ul li a:hover {
     height: 100vh;
     object-fit: fill;
     z-index: -1;
+}
+
+
+@media (width < 1700px) {
+    nav h2 {
+        padding-left: 1em;
+        
+    }
+
+    nav ul {
+        padding-right: 1em;
+    }
+}
+
+@media (width < 1300px) {
+
+    nav ul li {
+        padding: 1em 2em;
+    }
+}
+
+@media (width < 1080px) {
+
+    nav ul {
+        margin: 0 auto;
+    }
+
+    nav h2 {
+        display: none;
+    }
+}
+
+@media (width < 800px) {
+
 }
